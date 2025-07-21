@@ -67,4 +67,16 @@ func main() {
 	fmt.Println("SliceSearch", index) // SliceSearch 0
 	index2 := smt.SliceSearch(11, slice7)
 	fmt.Println("SliceSearch", index2) // SliceSearch -1
+
+	// SafeSlice
+	slice8 := []int{1, 2, 3, 4, 5}
+	fmt.Println(smt.SafeSlice(slice8, 1, 3)) // [2 3 4]
+
+	// SliceReverse
+	slice9 := []string{"a", "b", "c", "d", "e"}
+	fmt.Println(smt.SliceReverse(slice9)) // [e d c b a]
+
+	// SliceUniq
+	slice10 := []string{"a", "b", "c", "d", "e", "e", "e", "e"}
+	fmt.Println(smt.SliceUniq(slice10)) // [c d e a b]
 }
