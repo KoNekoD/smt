@@ -54,25 +54,30 @@ func main() {
     
     fmt.Println("Map", map4) // Map map[0:0 10:11 20:22 30:33 40:44 50:55 60:66 70:77 80:88 90:99]
     
+    // SliceIntersect
     slice5 := smt.SliceIntersect(slice1, slice3)
     
     slices.Sort(slice5) // sort for deterministic result
     
     fmt.Println("SliceIntersect", slice5) // SliceIntersect [0 2 4 6 8 10 12 14 16 18]
     
+    // SliceFlip
     slice6 := smt.SliceFlip(slice5)
     
     fmt.Println("SliceFlip", slice6[0], slice6[2], slice6[4], slice6[6]) // SliceFlip 0 1 2 3
     
+    // SliceShift
     slice7 := []int{99, 10, 2}
     fmt.Println("SliceShiftBefore", slice7) // SliceShiftBefore [99 10 2]
     itemFromSlice, slice7 := smt.SliceShift(slice7)
     fmt.Println("SliceShift", *itemFromSlice) // SliceShift 99
     fmt.Println("SliceShiftAfter", slice7)    // SliceShiftAfter [10 2]
     
+    // SliceSearch
     index := smt.SliceSearch(10, slice7)
     fmt.Println("SliceSearch", index) // SliceSearch 0
     index2 := smt.SliceSearch(11, slice7)
     fmt.Println("SliceSearch", index2) // SliceSearch -1
 }
+
 ```
